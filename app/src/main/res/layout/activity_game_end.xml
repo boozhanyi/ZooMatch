@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/ic_main_background"
+    tools:context=".Game_End">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_rounded_layout">
+
+
+        <TextView
+            android:id="@+id/gameOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Game Over"
+            android:layout_margin="10dp"
+            android:textSize="30dp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/victory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Victory"
+            android:layout_margin="10dp"
+            android:textSize="30dp"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/star_1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameOver"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_star"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/loseStar_1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameOver"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_lose_star"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/star_2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameOver"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/star_1"
+            android:src="@drawable/ic_star"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/loseStar_2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameOver"
+            android:layout_toRightOf="@+id/loseStar_1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_lose_star"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/star_3"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameOver"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/star_2"
+            android:src="@drawable/ic_star"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/loseStar_3"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameOver"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/loseStar_2"
+            android:src="@drawable/ic_lose_star"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:id="@+id/final_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/star_2"/>
+
+        <Button
+            android:id="@+id/playAgain"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/final_score"
+            android:layout_marginTop="20dp"
+            android:text="Play Again"
+            android:textSize="15dp"
+            android:backgroundTint="#51FF00"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
