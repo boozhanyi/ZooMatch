@@ -29,7 +29,7 @@ public class Gameplay extends AppCompatActivity {
     ImageView star1, star2, star3;
     Handler mHandler = new Handler();
     public int final_score = 0;
-    int move = 10;
+    int move = 5;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -142,12 +142,12 @@ public class Gameplay extends AppCompatActivity {
     }
 
     private void checkScore() {
-        if (final_score >= 15 & final_score < 20)
+        if (final_score >= 3 & final_score < 9)
             star1.setVisibility(View.VISIBLE);
-        else if (final_score >= 20 & final_score < 30) {
+        else if (final_score >= 9 & final_score < 15) {
             star1.setVisibility(View.VISIBLE);
             star2.setVisibility(View.VISIBLE);
-        } else if (final_score >= 30) {
+        } else if (final_score >= 15) {
             star1.setVisibility(View.VISIBLE);
             star2.setVisibility(View.VISIBLE);
             star3.setVisibility(View.VISIBLE);
@@ -202,25 +202,6 @@ public class Gameplay extends AppCompatActivity {
     void startRepeat() {
         repeatChecker.run();
     }
-
-    /*public boolean checkSwipeMatch() {
-        boolean check = false;
-        int choseAnimal = (int) animal.get(animalToBeDragged).getTag();
-        if (choseAnimal == (int) animal.get(animalToBeReplace + 1).getTag() && choseAnimal == (int) animal.get(animalToBeReplace + 2).getTag()) {
-            check = true;
-        } else if (choseAnimal == (int) animal.get(animalToBeReplace - 1).getTag() && choseAnimal == (int) animal.get(animalToBeReplace - 2).getTag()) {
-            check = true;
-        } else if (choseAnimal == (int) animal.get(animalToBeReplace - noOfBlocks).getTag() && choseAnimal == (int) animal.get(animalToBeReplace + noOfBlocks).getTag()) {
-            check = true;
-        } else if (choseAnimal == (int) animal.get(animalToBeReplace - noOfBlocks).getTag() && choseAnimal == (int) animal.get(animalToBeReplace - 2 * noOfBlocks).getTag()) {
-            check = true;
-        } else if (choseAnimal == (int) animal.get(animalToBeReplace + noOfBlocks).getTag() && choseAnimal == (int) animal.get(animalToBeReplace + 2 * noOfBlocks).getTag()) {
-            check = true;
-        } else if (choseAnimal == (int) animal.get(animalToBeReplace - 1).getTag() && choseAnimal == (int) animal.get(animalToBeReplace + 1).getTag()) {
-            check = true;
-        }
-        return check;
-    }*/
 
     private void animalInterchange() {
         int background = (int) animal.get(animalToBeReplace).getTag();

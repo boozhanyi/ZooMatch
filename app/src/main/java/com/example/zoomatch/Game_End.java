@@ -40,15 +40,15 @@ public class Game_End extends AppCompatActivity {
             }
         });
 
-        if (score >= 15 && score < 20) {
+        if (score >= 3 && score < 9) {
             star_1.setVisibility(View.VISIBLE);
             star_lose_2.setVisibility(View.VISIBLE);
             star_lose_3.setVisibility(View.VISIBLE);
-        } else if (score >= 20 && score < 30) {
+        } else if (score >= 9 && score < 15) {
             star_1.setVisibility(View.VISIBLE);
             star_2.setVisibility(View.VISIBLE);
             star_lose_3.setVisibility(View.VISIBLE);
-        } else if (score >= 30) {
+        } else if (score >= 15) {
             star_1.setVisibility(View.VISIBLE);
             star_2.setVisibility(View.VISIBLE);
             star_3.setVisibility(View.VISIBLE);
@@ -58,7 +58,7 @@ public class Game_End extends AppCompatActivity {
             star_lose_3.setVisibility(View.VISIBLE);
         }
 
-        if (score >=30)
+        if (score >=15)
             victory.setVisibility(View.VISIBLE);
         else
             lose.setVisibility(View.VISIBLE);
